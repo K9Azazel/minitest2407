@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Prime</title>
+</head>
+<body>
+
+</body>
+<script>
+    let length = +prompt("Nhập vào độ dài mảng");
+    let array = new Array(length);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt("Nhập ngẫu nhiên " + (i + 1));
+    }
+    function checkPrime(numb) {
+        let check = true;
+        if (numb < 2) {
+            check = false;
+        }
+        else {
+            for (let i = 2; i <= numb; i++) {
+                if (nunmb % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check
+    }
+    function sum(numbPrime) {
+        let sum1 = 0
+        for (let j = 0; j < numbPrime.length; j++) {
+            if (checkPrime(numbPrime[j]) == true)
+                sum1 += numbPrime[j]
+        }
+        return sum1
+    }
+    alert(' tổng các số nguyên có trong dãy bằng ' + sum(array))
+</script>
+</html>

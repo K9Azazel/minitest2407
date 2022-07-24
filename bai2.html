@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số</title>
+</head>
+<body>
+
+</body>
+<script>
+    let length = +prompt("Nhập vào độ dài mảng");
+    let array = new Array(length);
+    let count = 0;
+    let a = prompt('Nhập ký tự cần kiểm tra số lượng');
+    for (let i = 0; i < array.length; i++) {
+        array[i] = prompt("Nhập ngẫu nhiên " + (i + 1));
+        if (a == array[i])
+            count++
+    }
+        alert('Có tổng cộng' + count + 'ký tự' + a)
+</script>
+
+</html>
