@@ -8,9 +8,28 @@
 
 </body>
 <script>
-  let length = +prompt("Nhập vào độ dài mảng");
-  let array = new Array(length);
-  for (let i = 0; i < array.length; i++) {
-    array[i] = +prompt("Nhập ngẫu nhiên " + (i + 1));
+    function checkPrime(numb) {
+        let check = true;
+        if (numb < 2) {
+            check = false;
+        } else {
+            for (let i = 2; i < numb; i++) {
+                if (numb % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check
+    }
+    function sumPrime500() {
+        let sum = 0;
+        for (let j = 0; j <= 500; j++) {
+            if (checkPrime(j) == true)
+                sum += j
+        }
+        return sum
+    }
+    alert(' tong cua cac so nguyen to nho hon 500 la ' + sumPrime500() )
 </script>
 </html>
